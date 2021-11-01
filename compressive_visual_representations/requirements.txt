@@ -1,0 +1,5 @@
+absl-py
+tensorflow
+tensorflow-datasets
+tensorflow-hub
+tensorflow-probability
