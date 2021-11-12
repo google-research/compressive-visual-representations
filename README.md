@@ -21,34 +21,11 @@ To train a model with C-SimCLR on ImageNet run
 Refer to the scripts for further configuration options, and also to train the
 corresponding SimCLR and BYOL baselines.
 
-
 These command lines use the hyperparameters used to train the models in our
 paper. In particular, we used a batch size of 4096 using 32 Cloud TPUs.
 Using different accelerators will require reducing the batch size.
 To get started with Google Cloud TPUs, we recommend following this
 [tutorial](https://cloud.google.com/tpu/docs/tutorials/mnist).
-
-## Checkpoints
-
-The following table contains pretrained checkpoints for C-SimCLR, C-BYOL and
-also their respective baselines, SimCLR and BYOL. All models are trained on
-ImageNet. The Top-1 accuracy is obtained by training a linear classifier on top
-of a ``frozen'' backbone, following standard self-supervised learning evaluation
-protocol.
-
-| Algorithm | Backbone     | Training epochs | ImageNet Top-1 | Checkpoint |
-|-----------|--------------|-----------------|----------------|-------|
-| SimCLR    | ResNet 50    | 1000            |                |pending|
-| SimCLR    | ResNet 50 2x | 1000            |                |       |
-| C-SimCLR  | ResNet 50    | 1000            |                |       |
-| C-SimCLR  | ResNet 50 2x | 1000            |                |       |
-| BYOL      | ResNet 50    | 1000            |                |       |
-| BYOL      | ResNet 50 2x | 1000            |                |       |
-| C-BYOL    | ResNet 50    | 1000            |                |       |
-| C-BYOL    | ResNet 50 2x | 1000            |                |       |
-| C-BYOL    | ResNet 101   | 1000            |                |       |
-| C-BYOL    | ResNet 152   | 1000            |                |       |
-| C-BYOL    | ResNet 50    | 1500            |                |       |
 
 ## Reference
 
@@ -71,4 +48,3 @@ implementation of
 
 
 *Disclaimer: This is not an official Google product.*
-
