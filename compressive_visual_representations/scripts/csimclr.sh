@@ -18,20 +18,20 @@
 RESNET_DEPTH=50
 WIDTH_MULTIPLIER=1
 
-CONFIG="csimclr_300k"
+CONFIG="csimclr_300epochs"
 TRAIN_BATCH_SIZE=4096
 EVAL_BATCH_SIZE=256
 
-if [[ $CONFIG == "simclr_300k" ]]
+if [[ $CONFIG == "simclr_300epochs" ]]
 then
   ADDITIONAL_FLAGS="--pretrain_loss=contrastive --train_epochs=300 --weight_decay=1e-6 --learning_rate=0.3"
-elif [[ $CONFIG == "simclr_1000k" ]]
+elif [[ $CONFIG == "simclr_1000epochs" ]]
 then
   ADDITIONAL_FLAGS="--pretrain_loss=contrastive --train_epochs=1000 --weight_decay=1.5e-6 --learning_rate=0.2"
-elif [[ $CONFIG == "csimclr_300k" ]]
+elif [[ $CONFIG == "csimclr_300epochs" ]]
 then
   ADDITIONAL_FLAGS="--pretrain_loss=contrastive_ceb --ceb_beta=1.0 --kappa_e=1024.0 --kappa_b=10.0 --train_epochs=300 --weight_decay=1e-6 --learning_rate=0.3"
-elif [[ $CONFIG == "csimclr_1000k" ]]
+elif [[ $CONFIG == "csimclr_1000epochs" ]]
 then
   ADDITIONAL_FLAGS="--pretrain_loss=contrastive_ceb --ceb_beta=1.0 --kappa_e=1024.0 --kappa_b=10.0 --train_epochs=1000 --weight_decay=1.5e-6 --learning_rate=0.2"
 else

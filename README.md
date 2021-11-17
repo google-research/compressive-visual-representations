@@ -9,6 +9,8 @@ Bottleneck, and achieved consistent improvements in accuracy and robustness.
 We include implementations of the C-SimCLR and C-BYOL algorithms developed in
 our paper, as well as SimCLR and BYOL baselines.
 
+> :exclamation: We will release pretrained checkpoints soon.
+
 ## Getting Started
 
 Install the necessary dependencies with `pip install -r requirements.txt`.

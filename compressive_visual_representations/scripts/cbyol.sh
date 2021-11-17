@@ -18,20 +18,20 @@
 RESNET_DEPTH=50
 WIDTH_MULTIPLIER=1
 
-CONFIG="cbyol_300k"
+CONFIG="cbyol_300epochs"
 TRAIN_BATCH_SIZE=4096
 EVAL_BATCH_SIZE=256
 
-if [[ $CONFIG == "byol_300k" ]]
+if [[ $CONFIG == "byol_300epochs" ]]
 then
   ADDITIONAL_FLAGS="--pretrain_loss=byol --train_epochs=300 --ema_alpha=0.99 --weight_decay=1e-6 --learning_rate=0.3 --byol_loss_weight=5.0 --use_momentum_encoder=True --use_momentum_proj_head=True --explicitly_watch_vars=True"
-elif [[ $CONFIG == "byol_1000k" ]]
+elif [[ $CONFIG == "byol_1000epochs" ]]
 then
   ADDITIONAL_FLAGS="--pretrain_loss=byol --train_epochs=1000 --ema_alpha=0.996 --weight_decay=1.5e-6 --learning_rate=0.2 --byol_loss_weight=2.0 --use_momentum_encoder=True --use_momentum_proj_head=True --explicitly_watch_vars=True"
-elif [[ $CONFIG == "cbyol_300k" ]]
+elif [[ $CONFIG == "cbyol_300epochs" ]]
 then
   ADDITIONAL_FLAGS="--pretrain_loss=byol_ceb --train_epochs=300 --kappa_e=16384.0 --kappa_b=10.0 --ceb_beta=1.0 --ceb_sampling=True --use_target_projector=True --stochastic_projector=True --ema_alpha 0.99 --weight_decay=1e-6 --learning_rate=0.35 --byol_loss_weight=5.0 --use_momentum_encoder=True --use_momentum_proj_head=True --explicitly_watch_vars=True"
-elif [[ $CONFIG == "cbyol_1000k" ]]
+elif [[ $CONFIG == "cbyol_1000epochs" ]]
 then
   ADDITIONAL_FLAGS="--pretrain_loss=byol_ceb --train_epochs=1000 --kappa_e=16384.0 --kappa_b=10.0 --ceb_beta=1.0 --ceb_sampling=True --use_target_projector=True --stochastic_projector=True --ema_alpha 0.996 --weight_decay=1.5e-6 --learning_rate=0.25 --byol_loss_weight=2.0 --use_momentum_encoder=True --use_momentum_proj_head=True --explicitly_watch_vars=True"
 else
