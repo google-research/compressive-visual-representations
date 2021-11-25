@@ -9,8 +9,6 @@ Bottleneck, and achieved consistent improvements in accuracy and robustness.
 We include implementations of the C-SimCLR and C-BYOL algorithms developed in
 our paper, as well as SimCLR and BYOL baselines.
 
-> :exclamation: We will release pretrained checkpoints soon.
-
 ## Getting Started
 
 Install the necessary dependencies with `pip install -r requirements.txt`.
@@ -28,6 +26,28 @@ paper. In particular, we used a batch size of 4096 using 32 Cloud TPUs.
 Using different accelerators will require reducing the batch size.
 To get started with Google Cloud TPUs, we recommend following this
 [tutorial](https://cloud.google.com/tpu/docs/tutorials/mnist).
+
+## Checkpoints
+
+The following table contains pretrained checkpoints for C-SimCLR, C-BYOL and
+also their respective baselines, SimCLR and BYOL. All models are trained on
+ImageNet. The Top-1 accuracy is obtained by training a linear classifier on top
+of a ``frozen'' backbone, following standard self-supervised learning evaluation
+protocol.
+
+| Algorithm | Backbone     | Training epochs | ImageNet Top-1 | Checkpoint |
+|-----------|:------------:|:---------------:|:--------------:|:-----:|
+| SimCLR    | ResNet 50    | 1000            | 71.1           | [link](https://storage.googleapis.com/rl-infra-public/compressive-visual-representations/checkpoints/simclr/resnet50/checkpoint.tar.gz)      |
+| SimCLR    | ResNet 50 2x | 1000            | 74.6           | [link](https://storage.googleapis.com/rl-infra-public/compressive-visual-representations/checkpoints/simclr/resnet50-2x/checkpoint.tar.gz)      |
+| C-SimCLR  | ResNet 50    | 1000            | 71.8           | [link](https://storage.googleapis.com/rl-infra-public/compressive-visual-representations/checkpoints/simclr/resnet50/checkpoint.tar.gz)      |
+| C-SimCLR  | ResNet 50 2x | 1000            | 74.7           | [link](https://storage.googleapis.com/rl-infra-public/compressive-visual-representations/checkpoints/simclr/resnet50-2x/checkpoint.tar.gz)      |
+| BYOL      | ResNet 50    | 1000            | 74.4           | [link](https://storage.googleapis.com/rl-infra-public/compressive-visual-representations/checkpoints/byol/resnet50/checkpoint.tar.gz)      |
+| BYOL      | ResNet 50 2x | 1000            | 77.3           | [link](https://storage.googleapis.com/rl-infra-public/compressive-visual-representations/checkpoints/byol/resnet50-2x/checkpoint.tar.gz)      |
+| C-BYOL    | ResNet 50    | 1000            | 75.9           | [link](https://storage.googleapis.com/rl-infra-public/compressive-visual-representations/checkpoints/cbyol/resnet50/1000_epochs/checkpoint.tar.gz)      |
+| C-BYOL    | ResNet 50 2x | 1000            | 79.1           | [link](https://storage.googleapis.com/rl-infra-public/compressive-visual-representations/checkpoints/cbyol/resnet50-2x/checkpoint.tar.gz)      |
+| C-BYOL    | ResNet 101   | 1000            | 78.0           | [link](https://storage.googleapis.com/rl-infra-public/compressive-visual-representations/checkpoints/cbyol/resnet101/checkpoint.tar.gz)      |
+| C-BYOL    | ResNet 152   | 1000            | 78.8           | [link](https://storage.googleapis.com/rl-infra-public/compressive-visual-representations/checkpoints/cbyol/resnet152/checkpoint.tar.gz)      |
+| C-BYOL    | ResNet 50    | 1500            | 76.0           | [link](https://storage.googleapis.com/rl-infra-public/compressive-visual-representations/checkpoints/cbyol/resnet50/1500_epochs/checkpoint.tar.gz)      |
 
 ## Reference
 
