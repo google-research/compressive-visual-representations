@@ -32,8 +32,8 @@ To get started with Google Cloud TPUs, we recommend following this
 The following table contains pretrained checkpoints for C-SimCLR, C-BYOL and
 also their respective baselines, SimCLR and BYOL. All models are trained on
 ImageNet. The Top-1 accuracy is obtained by training a linear classifier on top
-of a ``frozen'' backbone, following standard self-supervised learning evaluation
-protocol.
+of a ``frozen'' backbone whilst performing self-supervised training of the
+network.
 
 | Algorithm | Backbone     | Training epochs | ImageNet Top-1 | Checkpoint |
 |-----------|:------------:|:---------------:|:--------------:|:-----:|
