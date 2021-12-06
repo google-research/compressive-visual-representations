@@ -2,9 +2,14 @@
 
 This repository contains the source code for our paper,
 [Compressive Visual Representations](https://arxiv.org/abs/2109.12909).
-We developed compressed versions of the SimCLR and BYOL self-supervised learning
-algorithms, which we call C-SimCLR and C-BYOL, using the Conditional Entropy
-Bottleneck, and achieved consistent improvements in accuracy and robustness.
+We developed information-compressed versions of the SimCLR and BYOL
+self-supervised learning algorithms, which we call C-SimCLR and C-BYOL, using
+the Conditional Entropy Bottleneck, and achieved significant improvements in
+accuracy and robustness, yielding linear evaluation performance competative with
+ fully supervised models.
+
+![cvr_perf](https://user-images.githubusercontent.com/4847452/144777161-d8d5ec7a-dc4e-4f45-a9c2-f57c2661d8eb.png)
+
 
 We include implementations of the C-SimCLR and C-BYOL algorithms developed in
 our paper, as well as SimCLR and BYOL baselines.
