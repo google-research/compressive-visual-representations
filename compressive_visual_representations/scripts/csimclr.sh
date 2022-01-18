@@ -14,6 +14,9 @@
 # limitations under the License.
 #!/bin/bash
 
+# The directory where checkpoints will be stored.
+MODEL_DIR="csimclr"
+
 # Architecture settings
 RESNET_DEPTH=50
 WIDTH_MULTIPLIER=1
@@ -44,6 +47,7 @@ python run.py \
 --dataset="imagenet2012" --train_mode="pretrain" \
 --resnet_depth=${RESNET_DEPTH} --width_multiplier=${WIDTH_MULTIPLIER} \
 --train_batch_size=${TRAIN_BATCH_SIZE} \
+--model_dir=${MODEL_DIR} \
 ${ADDITIONAL_FLAGS}
 
 
@@ -52,4 +56,5 @@ python run.py \
 --dataset="imagenet2012" --mode="eval" \
 --resnet_depth=${RESNET_DEPTH} --width_multiplier=${WIDTH_MULTIPLIER} \
 --eval_batch_size=${EVAL_BATCH_SIZE} \
+--model_dir=${MODEL_DIR} \
 ${ADDITIONAL_FLAGS}
